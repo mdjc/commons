@@ -1,4 +1,4 @@
-package com.github.mdjc.common.args;
+package com.github.mdjc.commons.args;
 
 public class Arguments {
 	public static String checkBlank(String s) {

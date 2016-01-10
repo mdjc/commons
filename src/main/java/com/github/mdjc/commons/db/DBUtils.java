@@ -1,4 +1,4 @@
-package com.github.mdjc.common.db;
+package com.github.mdjc.commons.db;
 
 import org.springframework.jdbc.core.JdbcTemplate;
 

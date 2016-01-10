@@ -1,4 +1,4 @@
-package com.github.mdjc.common.json;
+package com.github.mdjc.commons.json;
 
 import java.io.IOException;
 
