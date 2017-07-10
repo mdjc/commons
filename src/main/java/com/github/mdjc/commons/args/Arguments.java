@@ -22,6 +22,14 @@ public class Arguments {
 
 		return n;
 	}
+	
+	public static double checkPositive(double n) {
+		if (n < 0) {
+			throw new IllegalArgumentException();
+		}
+
+		return n;
+	}
 
 	public static void check(boolean condition) {
 		if (!condition) {
