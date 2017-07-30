@@ -1,6 +1,7 @@
 package com.github.mdjc.commons.db;
 
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 
 public class DBUtils {
 	public static void insert(JdbcTemplate jdbcTemplate, String table, Object... values) {
@@ -21,5 +22,15 @@ public class DBUtils {
 
 		sb.append(")");
 		return sb.toString();
+	}
+	
+	public static MapSqlParameterSource parametersMap(Object... params) {
+		MapSqlParameterSource parameters = new MapSqlParameterSource();
+
+		for (int i = 0; i < params.length; i += 2) {
+			parameters.addValue(String.valueOf(params[i]), params[i + 1]);
+		}
+
+		return parameters;
 	}
 }
